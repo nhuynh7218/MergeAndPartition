@@ -13,19 +13,22 @@ public class Merge {
 		String[] mergeString = new String[totalLength];
 		while (i < list1.length && j <list2.length)
 		{
+			//compares the 2 indexes
 			int small = list1[i].compareTo(list2[j]);
+			//if list1 index is smaller than list2, makes the list3 value k equal to it and i goes up 1
 			if (small < 0)
 				{
 					mergeString[k] = list1[i];
 					i++;
 				}
-			
+			//opposite, makes list2 = list3
 			else
 				{
 					mergeString[k] = list2[j];
 					j++;
 				}
-				k++;
+			//moves the index	
+			k++;
 		}
 		return mergeString;
 		
