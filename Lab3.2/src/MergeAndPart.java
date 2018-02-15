@@ -1,5 +1,5 @@
 
-public class Merge {
+public class MergeAndPart {
 	public static String[] merge(String[] list1, String[] list2) 
 	{
 		//index for list 1
@@ -46,6 +46,15 @@ public class Merge {
 				mergeString[k] = list1[x];
 			}
 		return mergeString;
+		
+	}
+	public static int partition(int[] list)
+	{
+		
+		int length = list.length;
+		int[] part = new int[length];
+		
+		
 		
 	}
 }

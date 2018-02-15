@@ -6,7 +6,7 @@ public class Runner {
 		int[] test3 = {3, 4, 2, 7, 12 ,22 , 0, 1};
 	
 		long start = System.nanoTime();
-		String[] mergeResult = Merge.merge(test1,test2);
+		String[] mergeResult = MergeAndPart.merge(test1,test2);
 		long end = System.nanoTime();
 		long time = end - start;
 		System.out.println("Merge test took: " + time + "nanoseconds");
@@ -15,12 +15,12 @@ public class Runner {
 		System.out.println(x + " ");
 	}
 		
-		/*start = System.nanoTime();
+		start = System.nanoTime();
 		int pivotFianlPos = partition(test3);
 		end = System.nanoTime();
 		time = end - start;
 		System.out.println("Partition test took: " + time + "nanoseconds" );
 		System.out.println("Final Pivot Position: " + pivotFianlPos);
-		System.out.println(Arrays.toString(test3));*/
+		System.out.println(Arrays.toString(test3));
 	}
 }
