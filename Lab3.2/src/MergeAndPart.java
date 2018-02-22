@@ -49,7 +49,7 @@ public class MergeAndPart {
 		
 	}
 	
-	public static int[] partition(int[] list)
+	public static int partition(int[] list)
 	{
 		
 		int length = list.length;
