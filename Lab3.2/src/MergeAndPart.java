@@ -48,13 +48,31 @@ public class MergeAndPart {
 		return mergeString;
 		
 	}
-	public static int partition(int[] list)
+	
+	public static int[] partition(int[] list)
 	{
 		
 		int length = list.length;
-		int[] part = new int[length];
-		
-		
+		int left = 0;
+		int right = 0;
+		int[] leftSide = new int[length/2];
+		int[] rightSide = new int[length/2];
+		for(int i = 0; i < length; i++)
+			{
+				if (list[i+1] <= list[0])
+				{
+					leftSide[left] = list[i+1];
+					i++;
+					left++;
+				}
+				if (list[i+1] > list[0])
+				{
+					rightSide[right] = list[i+1];
+					i++;
+					right++;
+				}
+			}
+		return leftSide;
 		
 	}
 }
