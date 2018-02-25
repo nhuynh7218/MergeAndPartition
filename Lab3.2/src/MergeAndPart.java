@@ -55,24 +55,29 @@ public class MergeAndPart {
 		int length = list.length;
 		int left = 0;
 		int right = 0;
+		int count = 0;
 		int[] leftSide = new int[length/2];
 		int[] rightSide = new int[length/2];
+		int pivot = list[0];
 		for(int i = 0; i < length; i++)
 			{
-				if (list[i+1] <= list[0])
+			
+				if (list[i+1] <= pivot)
 				{
 					leftSide[left] = list[i+1];
 					i++;
 					left++;
+					count++;
 				}
-				if (list[i+1] > list[0])
+				if (list[i+1] > pivot)
 				{
 					rightSide[right] = list[i+1];
 					i++;
 					right++;
 				}
 			}
-		return leftSide;
+		
+		return count;
 		
 	}
 }
