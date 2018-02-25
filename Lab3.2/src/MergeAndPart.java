@@ -53,31 +53,26 @@ public class MergeAndPart {
 	{
 		
 		int length = list.length;
-		int left = 0;
-		int right = 0;
-		int count = 0;
-		int[] leftSide = new int[length/2];
-		int[] rightSide = new int[length/2];
+		int countIndex = 0;
 		int pivot = list[0];
-		for(int i = 0; i < length; i++)
+		for(int i = 1; i < length; i++)
 			{
 			
-				if (list[i+1] <= pivot)
+				if (list[i] <= pivot)
 				{
-					leftSide[left] = list[i+1];
+					SwapMethods.swap(list, list[i], pivot);
 					i++;
-					left++;
-					count++;
+					countIndex++;
 				}
-				if (list[i+1] > pivot)
+				else if (list[i] > pivot)
 				{
-					rightSide[right] = list[i+1];
+					
 					i++;
-					right++;
+					
 				}
 			}
 		
-		return count;
+		return countIndex;
 		
 	}
 }

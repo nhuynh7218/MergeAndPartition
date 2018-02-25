@@ -3,7 +3,7 @@ public class Runner {
 	public static void main(String[] args) {
 		String [] test1 = {"apple","cucumber","microsoft","zorro"};
 		String [] test2 = {"banana","cherry","mahoghany","oreos","pinata"};
-		int[] test3 = {3, 4, 2, 7, 12 ,22 , 0, 1};
+		int[] test3 = {3, 4, 2, 7, 12, 22, 0, 1};
 	
 		long start = System.nanoTime();
 		String[] mergeResult = MergeAndPart.merge(test1,test2);
@@ -16,11 +16,11 @@ public class Runner {
 	}
 		
 		start = System.nanoTime();
-		int pivotFianlPos = partition(test3);
+		int pivotFianlPos = MergeAndPart.partition(test3);
 		end = System.nanoTime();
 		time = end - start;
 		System.out.println("Partition test took: " + time + "nanoseconds" );
 		System.out.println("Final Pivot Position: " + pivotFianlPos);
-		System.out.println(Arrays.toString(test3));
+		//System.out.println(Arrays.toString(test3));
 	}
 }
