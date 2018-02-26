@@ -54,20 +54,21 @@ public class MergeAndPart {
 		
 		int length = list.length;
 		int countIndex = 0;
-		int pivot = list[0];
+		int pivot = list[countIndex];
+		int back = list.length-1;
 		for(int i = 1; i < length; i++)
 			{
 			
 				if (list[i] <= pivot)
 				{
-					SwapMethods.swap(list, list[i], pivot);
-					i++;
-					countIndex++;
+					SwapMethods.swap(list, i, i-1);
+					countIndex = i;
 				}
-				else if (list[i] > pivot)
+				else if (list[i] > pivot && back > i)
 				{
-					
-					i++;
+					SwapMethods.swap(list, i, back);
+					back--;
+					i--;
 					
 				}
 			}
