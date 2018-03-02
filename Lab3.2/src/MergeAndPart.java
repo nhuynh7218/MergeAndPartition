@@ -1,4 +1,5 @@
-
+//Nicholas Huynh Lab 3.2
+//Finished 3/2/18
 public class MergeAndPart {
 	public static String[] merge(String[] list1, String[] list2) 
 	{
@@ -58,10 +59,12 @@ public class MergeAndPart {
 		int back = list.length-1;
 		for(int i = 1; i < length; i++)
 			{
+			//when less than pivot, swap
 			
 				if (list[i] <= pivot)
 				{
 					SwapMethods.swap(list, i, i-1);
+					//changes the index value of pivot to the place of the number swapped
 					countIndex = i;
 				}
 				else if (list[i] > pivot && back > i)

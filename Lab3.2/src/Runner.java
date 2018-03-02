@@ -10,7 +10,7 @@ public class Runner {
 		long end = System.nanoTime();
 		long time = end - start;
 		System.out.println("Merge test took: " + time + "nanoseconds");
-	for (String x: mergeResult)
+	for (String x : mergeResult)
 	{
 		System.out.println(x + " ");
 	}
@@ -21,6 +21,9 @@ public class Runner {
 		time = end - start;
 		System.out.println("Partition test took: " + time + "nanoseconds" );
 		System.out.println("Final Pivot Position: " + pivotFianlPos);
-		//System.out.println(Arrays.toString(test3));
+		for (int y : test3)
+		{
+			System.out.print(y + " ");
+		}
 	}
 }
