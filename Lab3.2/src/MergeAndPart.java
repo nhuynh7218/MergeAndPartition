@@ -55,13 +55,16 @@ public class MergeAndPart {
 		int length = list.length;
 		int countIndex = 0;
 		int pivot = list[0];
+		int left = 0;
 		for(int i = 1; i < length; i++)
 			{
 			
 				if (list[i] <= pivot)
 				{
 					SwapMethods.swap(list, list[i], pivot);
+					SwapMethods.swap(list, list[left+1], pivot);
 					i++;
+					left++;
 					countIndex++;
 				}
 				else if (list[i] > pivot)
@@ -73,6 +76,14 @@ public class MergeAndPart {
 			}
 		
 		return countIndex;
+		
+	}
+	public static String[] mergeSort(String[] list)
+	{
+		
+	}
+	public static int partitionFin(int[], int front, int back)
+	{
 		
 	}
 }
