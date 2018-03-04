@@ -78,12 +78,5 @@ public class MergeAndPart {
 		return countIndex;
 		
 	}
-	public static String[] mergeSort(String[] list)
-	{
-		
-	}
-	public static int partitionFin(int[], int front, int back)
-	{
-		
-	}
+	
 }
