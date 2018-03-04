@@ -1,4 +1,5 @@
-
+//Nicholas Huynh Lab 3.2
+//Finished 3/2/18
 public class MergeAndPart {
 	public static String[] merge(String[] list1, String[] list2) 
 	{
@@ -54,23 +55,36 @@ public class MergeAndPart {
 		
 		int length = list.length;
 		int countIndex = 0;
+<<<<<<< HEAD
 		int pivot = list[0];
 		int left = 0;
+=======
+		int pivot = list[countIndex];
+		int back = list.length-1;
+>>>>>>> branch 'master' of https://github.com/nhuynh7218/MergeAndPartition.git
 		for(int i = 1; i < length; i++)
 			{
+			//when less than pivot, swap
 			
 				if (list[i] <= pivot)
 				{
+<<<<<<< HEAD
 					SwapMethods.swap(list, list[i], pivot);
 					SwapMethods.swap(list, list[left+1], pivot);
 					i++;
 					left++;
 					countIndex++;
+=======
+					SwapMethods.swap(list, i, i-1);
+					//changes the index value of pivot to the place of the number swapped
+					countIndex = i;
+>>>>>>> branch 'master' of https://github.com/nhuynh7218/MergeAndPartition.git
 				}
-				else if (list[i] > pivot)
+				else if (list[i] > pivot && back > i)
 				{
-					
-					i++;
+					SwapMethods.swap(list, i, back);
+					back--;
+					i--;
 					
 				}
 			}
