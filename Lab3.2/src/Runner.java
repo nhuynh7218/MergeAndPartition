@@ -4,6 +4,7 @@ public class Runner {
 		//merge
 		String [] test1 = {"apple","cucumber","microsoft","zorro"};
 		String [] test2 = {"banana","cherry","mahoghany","oreos","pinata"};
+		String [] test4 = {"d","e", "c","a","b"};
 		int[] test3 = {3, 4, 2, 7, 12, 22, 0, 1};
 	
 		long start = System.nanoTime();
@@ -28,7 +29,7 @@ public class Runner {
 			}
 		//mergeSort
 		start = System.nanoTime();
-		String[] mergeSortArray = FinalSorts.mergeSort(test1);
+		String[] mergeSortArray = FinalSorts.mergeSort(test4);
 		end = System.nanoTime();
 		time = end - start;
 		System.out.println("MergeSort took" + time + "nanoseconds");
