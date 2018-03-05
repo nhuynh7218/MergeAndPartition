@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class FinalSorts {
 	public static String [] mergeSort(String [] list)
@@ -6,6 +7,11 @@ public class FinalSorts {
 		{
 			return list;
 		}
-		return (MergeAndPart.merge(list, list));
+		String front[] = Arrays.copyOfRange(list, 0, list.length/2);
+		String back[] = Arrays.copyOfRange(list, list.length/2, list.length);
+		
+		return MergeAndPart.merge(mergeSort(front), mergeSort(back));
 	}
+	
+	//public static int
 }
