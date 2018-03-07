@@ -6,7 +6,8 @@ public class Runner {
 		String [] test2 = {"banana","cherry","mahoghany","oreos","pinata"};
 		String [] test4 = {"d","e", "c","a","b"};
 		int[] test3 = {3, 4, 2, 7, 12, 22, 0, 1};
-	
+		int[] test5 = {5, 8, 2, 6, 7, 1, 9};
+		
 		long start = System.nanoTime();
 		String[] mergeResult = MergeAndPart.merge(test1,test2);
 		long end = System.nanoTime();
@@ -37,7 +38,16 @@ public class Runner {
 			{
 			System.out.print(z + " ");
 			}
-		
+		//quicksort
+		start = System.nanoTime();
+		QuickSort.quickSort(test5, 0, test5.length);
+		end = System.nanoTime();
+		time = end - start;
+		System.out.println("MergeSort took" + time + "nanoseconds");
+		for (int q: test5)
+			{
+			System.out.print(q + " ");
+			}
 	}
 	
 }

@@ -19,10 +19,25 @@ public class FinalSorts {
 		}
 	}
 	
-	public static int partitionFinal(int[] list1, int front, int back)
-	{
-	int pivot = front;
-	
-
-	}
+	public static int partitionFinal(int [] list, int left, int right)
+    {
+       
+		int pivot = list[left]; 
+		
+		int i = (right - 1); 
+      
+        for (int j = left; j < right; j++)
+        {
+            
+            if (list[j] <= pivot)
+            {
+                i++;
+               SwapMethods.swap(list, i, j);
+            }
+        }
+        
+      SwapMethods.swap(list, i+1, right);
+      
+        return i+1;
+    }
 }

@@ -4,7 +4,11 @@ public class QuickSort {
 	{
 		if (small < big)
 		{
-			MergeAndPart.partition(list,small, big);
+			FinalSorts.partitionFinal(list,small, big);
 		}
+		  int pivot = FinalSorts.partitionFinal(list, small, big);
+	         
+	         quickSort(list, small, pivot-1);
+	         quickSort(list, pivot+1, big);
 	}
 }
