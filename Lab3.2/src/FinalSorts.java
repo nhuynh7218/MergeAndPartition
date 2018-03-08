@@ -22,9 +22,9 @@ public class FinalSorts {
 	public static int partitionFinal(int [] list, int left, int right)
     {
        
-		int pivot = list[left]; 
+		int pivot = list[right]; 
 		
-		int i = (right - 1); 
+		int i = left - 1; 
       
         for (int j = left; j < right; j++)
         {
